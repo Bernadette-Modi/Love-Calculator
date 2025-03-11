@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Calculator 💘</title>
+    <style>
+        body{ text-align: center; font-family: Arial, sans-serifs; background-color: #ffccd5; }
+        h1 { color: #d63384; }
+        form { margin-top: 20px; }
+        input, button { padding: 10px; margin: 10px; }
+    </style>
+</head>
+<body>
+    <h1>💖 Love Calculator 💖</h1>
+    <form method="POST">
+        <input typr="text" name="name1" placeholder="Your Name" required>
+        <input type="text" name="name2" placeholder="Partner's Name" required>
+        <button type="submit">Calculate Love</button>
+    </form>
+
+    {% if love_score %}
+        <h2>{{ name1 }} & {{ name2 }}'s Love Score: {{ love_score }}%</h2>
+        <p>{{ message }}</p>
+    {% endif %}
+</body>
+</html>
